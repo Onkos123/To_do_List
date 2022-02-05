@@ -1,6 +1,5 @@
 package br.keneitec.dio.todolist.extensions
 
-import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import java.text.SimpleDateFormat
 import java.util.*
@@ -8,7 +7,7 @@ import java.util.*
 private val locale = Locale("pt","br")
 
 fun Date.format() : String{
-    return SimpleDateFormat("dd/MM/yyyy").format(this)
+    return SimpleDateFormat("dd/MM/yyyy", locale).format(this)
 }
 var TextInputLayout.text : String
     get() = editText?.text?.toString() ?:""

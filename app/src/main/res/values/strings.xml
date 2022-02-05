@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">To do List</string>
+    <string name="menuEdit">Editar</string>
+    <string name="menuDelete">Deletar</string>
 </resources>

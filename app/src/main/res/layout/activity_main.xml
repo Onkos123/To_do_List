@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_task"
@@ -32,18 +32,27 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"/>
 
+    <include
+        android:id="@+id/includeEmpty"
+        layout="@layout/empty_state"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        tools:listitem="@layout/item_task"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/tv_titulo"
-        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo"
+        tools:listitem="@layout/item_task" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
